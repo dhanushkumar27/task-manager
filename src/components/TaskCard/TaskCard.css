@@ -1,0 +1,58 @@
+
+.task-list-item{
+    border-radius: 8px;
+    padding:10px;
+    margin-bottom: 10px;
+    border:1px solid black;
+}
+
+.task-list-item-priority{
+    font-size:12px
+
+}
+
+.task-list-item-title{
+    font-size:18px;
+    
+}
+
+.task-list-item-description{
+    font-size:12px;
+}
+
+.task-list-item-deadline{
+    font-size:12px;
+
+}
+
+.task-list-item-status-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-list-item-status{
+    font-size:12px;
+    margin:0px;
+}
+
+.task-list-item-button{
+color:red;
+border:1px solid red;
+border-radius: 8px;
+width:100px;
+height: 30px;
+background-color: transparent;
+}
+
+.green-border{
+    border-left:4px solid green;
+}
+
+.red-border{
+    border-left:4px solid red;
+}
+
+.orange-border{
+    border-left:4px solid orange;
+}

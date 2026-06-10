@@ -1,0 +1,56 @@
+
+.dashboard-main-container{
+    height: 100vh;
+    display: flex;
+}
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding:20px;
+    height: 100vh;
+    background-color: lightblue;
+    color:black;
+}
+.dashboard-filter-container{
+    display: flex;
+    align-items: center;
+}
+.dashboard-filter-container-heading{
+    margin-right:10px;
+}
+
+.dashboard-all-tasks-container{
+    display: flex;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top:10px;
+    flex-grow: 1;
+}
+
+.dashboard-task-container{
+    width:30%;
+
+    background-color: #ffffff;
+    border-radius: 8px;
+    min-height: 30%;
+    padding:10px;
+}
+
+.unorder-list-task{
+    list-style-type: none;
+    padding:0px;
+}
+
+.todo-line{
+    border:1px solid blue;
+}
+.inProgress-line{
+border:1px solid orange;
+}
+
+.done-line{
+border:1px solid green;
+}

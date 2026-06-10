@@ -1,0 +1,28 @@
+
+.login-sideBar-container{
+    width: 25vw;
+    height: 100vh;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.login-sideBar-heading{
+    color:#ffffff
+}
+
+.login-sideBar-para{
+    color:white;
+}
+
+.login-sideBar-unorder-list{
+    
+    
+}
+
+.login-sideBar-list-item{
+    color:white;
+    margin-bottom: 10px;
+}
