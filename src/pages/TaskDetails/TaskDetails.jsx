@@ -6,7 +6,11 @@ import DashboardSideBar from '../../components/dashboardSideBar/dashboardSideBar
 
 import TaskDetailsContext from "../../context/TaskDetailsContext/TaskDetailsContext"
 
+import { IoArrowBackSharp } from "react-icons/io5";
+
 import './TaskDetails.css'
+
+
 
 const TaskDetails  = () =>{
     const {id} = useParams()
@@ -24,7 +28,7 @@ const TaskDetails  = () =>{
                         <div className='taskDetails-container'>
                             <div className='taskDetails-responsive-container'>
                                 <Link className='back-to-board-link' to="/">
-                                <p>Back to board</p>
+                                <p className='back-to-board-para' ><IoArrowBackSharp/>  Back to board</p>
                                 </Link>
                                 <p>{task.priority}</p>
                                 <h1 className="taskDetails-heading">{task.title}</h1>
