@@ -16,14 +16,6 @@
     flex-direction: column;
 }
 
-.dashboard-sideBar-button1{
-    background-color: blue;
-    color:white;
-    border-radius: 8px;
-    padding:10px;
-    margin-bottom:20px;
-    border:none;
-}
 
 .dashboard-sideBar-button2{
     background-color: transparent;

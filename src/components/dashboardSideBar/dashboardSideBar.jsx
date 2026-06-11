@@ -1,3 +1,6 @@
+import TaskPopup from '../TaskPopup/TaskPopup.jsx'
+
+
 import './dashboardSideBar.css'
 
 const onClickLogout = () =>{
@@ -12,7 +15,7 @@ const DashboardSideBar = () =>(
         <p className="dashboard-sideBar-para">Sign in to open your poject dashboard.</p>
         </div>
         <div className='dashboard-sideBar-buttons'>
-            <button className="dashboard-sideBar-button1" type="button">+ Add Task</button>
+            <TaskPopup/>
             <button onClick={onClickLogout} className="dashboard-sideBar-button2" type="button">Log out</button>
         </div>
     </div>

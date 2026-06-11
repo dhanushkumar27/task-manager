@@ -1,0 +1,84 @@
+
+
+.popup-overlay{
+   background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(3px);
+}
+
+.task-popup-container{
+    background-color: #ffffff;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    border-radius: 8px;
+    min-width:400px;
+}
+.popup-heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0px;
+}
+.popup-label{
+    margin-bottom: 5px;
+}
+.popup-textarea{
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 10px;
+    resize: none;
+    padding:5px;
+}
+.popup-input{
+    margin-bottom: 20px;
+    padding:10px;
+    border-radius: 4px;
+}
+.popup-select{
+    margin-bottom: 10px;
+    padding:10px;
+    border-radius: 8px;
+}
+.popup-main-select-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.popup-select-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-buttons-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.dashboard-sideBar-button1{
+    background-color: blue;
+    color:white;
+    border-radius: 8px;
+    padding:10px;
+    margin-bottom:20px;
+    border:none;
+}
+.popup-button-cancel{
+    background-color: transparent;
+    border:1px solid black;
+    padding:8px;
+    border-radius: 6px;
+    width:100px;
+    color:black;
+    font-weight:bold;
+    margin-right: 10px;
+}
+.popup-button-createTask{
+    background-color: blue;
+    color:white;
+    font-weight:bold;
+    padding:8px;
+    border-radius: 6px;
+    flex-grow: 1;
+}
