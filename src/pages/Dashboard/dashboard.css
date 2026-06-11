@@ -11,13 +11,22 @@
     height: 100vh;
     background-color: lightblue;
     color:black;
+    width: 80vw;
 }
 .dashboard-filter-container{
     display: flex;
     align-items: center;
 }
+
+.select-element-container{
+    padding:10px;
+    border-radius: 8px;
+    border:none;
+}
+
 .dashboard-filter-container-heading{
     margin-right:10px;
+    font-size:16px;
 }
 
 .dashboard-all-tasks-container{
@@ -28,6 +37,9 @@
     align-items: flex-start;
     margin-top:10px;
     flex-grow: 1;
+}
+.taskCard-body{
+    text-align: center;
 }
 
 .dashboard-task-container{
@@ -42,6 +54,10 @@
 .unorder-list-task{
     list-style-type: none;
     padding:0px;
+}
+.taskCard-header{
+    display:flex;
+    justify-content: space-between;
 }
 
 .todo-line{

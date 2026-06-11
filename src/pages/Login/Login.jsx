@@ -19,6 +19,7 @@ getApiCall = async (event) =>{
     const url = "https://csyibgv5y0.execute-api.eu-north-1.amazonaws.com/api/auth/signin"
     const response = await fetch(url,options)
     const data = await response.json()
+    console.log(data)
     if(data.success){
         const token = data.data.token 
         localStorage.setItem('jwt_token',token)

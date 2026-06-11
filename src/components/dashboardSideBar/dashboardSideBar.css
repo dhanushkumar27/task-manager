@@ -1,6 +1,6 @@
 
 .dashboard-sideBar-container{
-    min-width: 20vw;
+    width: 20vw;
     height: 100vh;
     background-color:black;
     display: flex;

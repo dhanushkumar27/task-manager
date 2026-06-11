@@ -1,0 +1,39 @@
+
+
+.taskDetails-main-container{
+    display:flex;
+}
+.taskDetails-container{
+    width: 80vw;
+    display:flex;
+    justify-content: center;
+    background-color: lightblue;
+}
+.taskDetails-responsive-container{
+    width:500px;
+}
+.status-deadline-container{
+background-color: white;
+margin-bottom: 20px;
+padding:10px;
+}
+
+.description-container{
+    background-color: white;
+    border-radius: 8px;
+    padding:10px;
+}
+.span-element{
+    display:block;
+    width:100px;
+    font-weight: bold;
+}
+.status-card{
+    display:flex;
+}
+.back-to-board-link{
+    text-decoration: none;
+    color:blue;
+    border:none;
+    border-radius: 8px;
+}
