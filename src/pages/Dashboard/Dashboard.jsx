@@ -36,6 +36,7 @@ onChangeFilter = (event) =>{this.setState({selectedFilter:event.target.value})}
 
 
 
+
     const token = localStorage.getItem('jwt_token')
     if(token === null){
             return <Navigate to="/login" replace/>
@@ -75,7 +76,7 @@ onChangeFilter = (event) =>{this.setState({selectedFilter:event.target.value})}
                                 { (selectedFilter === "todo" || selectedFilterVisibility === "allpriorities") && <div className="dashboard-task-container">
                                     <div className="taskCard-header">
                                     <p>TO DO</p>
-                                    <p>{todoTaskCount}</p>
+                                    <p className="todoCount-para">{todoTaskCount}</p>
                                     </div>
                                     
                                     <hr className="todo-line"/>
@@ -90,7 +91,7 @@ onChangeFilter = (event) =>{this.setState({selectedFilter:event.target.value})}
                                 { (selectedFilter === "inprogress" || selectedFilterVisibility === "allpriorities") && <div className="dashboard-task-container ">
                                     <div className="taskCard-header">
                                     <p>IN PROGRESS</p>
-                                    <p>{inprogressTaskCount}</p>
+                                    <p className="inprogressCount-para">{inprogressTaskCount}</p>
                                     </div>
                                     <hr className="inProgress-line"/>
                                     <div>
@@ -105,10 +106,10 @@ onChangeFilter = (event) =>{this.setState({selectedFilter:event.target.value})}
                                 { (selectedFilter === "done" || selectedFilterVisibility === "allpriorities") && <div className="dashboard-task-container">
                                     <div className="taskCard-header">
                                     <p>DONE</p>
-                                    <p>{doneTaskCount}</p>
+                                    <p className="doneCount-para">{doneTaskCount}</p>
                                     </div>
                                     <hr className="done-line"/>
-                                    <div className="taskCard-body">
+                                    <div>
                                     {doneTaskCount > 0 ? <ul className="unorder-list-task">{taskListContext.map(eachTask => {
                                         if(eachTask.status === "done"){
                                             return <TaskCard  key={eachTask.id} taskDetails={eachTask}/>

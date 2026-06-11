@@ -66,6 +66,7 @@
     margin-bottom:20px;
     border:none;
     width: 100%;
+    border:none;
 }
 .popup-button-cancel{
     background-color: transparent;
@@ -79,6 +80,7 @@
 }
 .popup-button-createTask{
     background-color: blue;
+    border:none;
     color:white;
     font-weight:bold;
     padding:8px;

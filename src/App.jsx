@@ -12,7 +12,15 @@ import TaskDetailsContext from './context/TaskDetailsContext/TaskDetailsContext.
 import './App.css'
 
 class  App extends Component{
-  state = {taskList:[
+  state = {taskList:[]}
+
+componentDidMount(){
+  const tasks = localStorage.getItem("taskList")
+
+  if(tasks != null){
+      this.setState({taskList:JSON.parse(tasks)})
+  }else{
+    this.setState({taskList:[
             {id: 1,
     title: 'Research',
     description:
@@ -74,11 +82,14 @@ class  App extends Component{
     priority: 'medium',
     status: 'done',
     deadline: '2024-12-06',
-}]}
+}]})
+  }
+}
 
   addTaskContext = (task) =>{
     const {taskList} = this.state
     this.setState({taskList:[...taskList,task]})
+    localStorage.setItem("taskList",JSON.stringify([...taskList,task]))
   }
 
   updateTaskContext = (task) => {
@@ -86,17 +97,18 @@ class  App extends Component{
     const {taskList} = this.state 
     const updatedTaskList = taskList.map(eachTask => eachTask.id === task.id ? {...eachTask,status:task.status}:eachTask)
     this.setState({taskList:updatedTaskList})
+    localStorage.setItem("taskList",JSON.stringify(updatedTaskList))
   }
   
   removeTaskContext = (id) => {
     const {taskList} = this.state
     const updatedTaskList = taskList.filter(eachTask => eachTask.id !== id)
     this.setState({taskList:updatedTaskList})
+     localStorage.setItem("taskList",JSON.stringify(updatedTaskList))
   }
 
   render(){
     const {taskList} = this.state
-    console.log(taskList)
     return (
         <TaskDetailsContext.Provider
          value={{taskListContext:taskList,

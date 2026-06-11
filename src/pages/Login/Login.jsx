@@ -6,7 +6,7 @@ import {Navigate} from 'react-router-dom'
 import './Login.css'
 
 class LoginWrapper  extends Component{
-state = {email:"",password:"",error:false,errorText:""}
+state = {email:"",password:"",error:false,errorText:"",showPassword:false}
 
 getApiCall = async (event) =>{
     event.preventDefault()
@@ -31,16 +31,19 @@ getApiCall = async (event) =>{
     }
 }
 
+onClickShowPassword = () =>{this.setState(prevState => ({showPassword:!prevState.showPassword}))}
+
 onChangeUsername = (event) => {this.setState({email:event.target.value})}
 
 onChangePassword = (event) => {this.setState({password:event.target.value})}
 
     render(){
-        const {email,password} = this.state
+        const {email,password,showPassword,error,errorText} = this.state
         const token = localStorage.getItem('jwt_token')
        if(token !== null){
             return <Navigate to="/" replace/>
        }
+       const passwordType = showPassword ? "text" : "password"
         return (
             <div className="login-main-container">
                 <LoginSideBar/>
@@ -51,8 +54,13 @@ onChangePassword = (event) => {this.setState({password:event.target.value})}
                     <label className="login-form-label">EMAIL</label>
                     <input className="login-form-input" type="text" value={email} placeholder="Email" onChange={this.onChangeUsername}/>
                     <label className="login-form-label">PASSWORD</label>
-                    <input className="login-form-input" type="password" value={password} placeholder="Password"  onChange={this.onChangePassword}/>
+                    <input className="login-form-input" type={passwordType} value={password} placeholder="Password"  onChange={this.onChangePassword}/>
+                    <div className="show-password-container">
+                    <input onClick={this.onClickShowPassword} id="checkbox" checked={showPassword} type="checkbox"/>
+                    <label htmlFor="checkbox">Show Password</label>
+                    </div>
                     <button className="login-form-button" type="submit">Login</button>
+                    {error && <p className="error-para">{errorText}</p>}
                 </form>
                 </div>
             </div>

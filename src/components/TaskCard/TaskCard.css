@@ -1,24 +1,69 @@
 
 
-.tast-link-item{
+.task-link-item{
     color:black;
     text-decoration: none;
     border:none;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    
 }
 .task-list-item{
     border-radius: 8px;
     padding:10px;
     margin-bottom: 15px;
-    border:1px solid black;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    
+}
+.task-priority-container{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    align-items: center;
+}
+.completed-para{
+    margin:0px;
+    background-color: #B5D6B6;
+    color: green;
+    border:none;
+    border-radius: 10px;
+    padding:5px 10px;
+    font-size:12px;
 }
 
 .task-list-item-priority{
-    font-size:12px
+    font-size:12px;
+    margin:0px;
+    align-self:flex-start;
+}
+.low{
+    background-color: #B5D6B6;
+    color: green;
+    font-weight: bold;
+    border:none;
+    border-radius: 10px;
+    padding:5px 10px;
+}
+.medium{
+    background-color: #CFB5A1;
+    color: brown;
+    font-weight: bold;
+    border:none;
+    border-radius: 10px;
+    padding:5px 10px;
+}
+.high{
+    background-color: #DCA8A8;
+    color: red;
+    font-weight: bold;
+    border:none;
+    border-radius: 10px;
+    padding:5px 10px;
+    
+}
 
-}
-.horizontal-line-task{
-    margin:10px 0px;
-}
 
 .task-list-item-title{
     font-size:18px;
@@ -27,12 +72,17 @@
 
 .task-list-item-description{
     font-size:12px;
-
+    margin:0px;
 }
 
 .task-list-item-deadline{
     font-size:12px;
-
+    color:orange;
+    font-weight: bold;
+}
+.deadline-span-ele{
+    color:black;
+    font-weight: bold;
 }
 
 .task-list-item-status-container{

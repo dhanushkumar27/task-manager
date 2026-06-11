@@ -12,7 +12,7 @@ const DashboardSideBar = () =>(
     <div className="dashboard-sideBar-container">
         <div className='dashboard-sideBar-content'>
         <h1 className="dashboard-sideBar-heading">Task Manager</h1>
-        <p className="dashboard-sideBar-para">Sign in to open your poject dashboard.</p>
+        <p className="dashboard-sideBar-para">Project Dashboard.</p>
         </div>
         <div className='dashboard-sideBar-buttons'>
             <TaskPopup/>

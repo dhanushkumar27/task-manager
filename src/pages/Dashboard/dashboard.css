@@ -9,7 +9,7 @@
     flex-grow: 1;
     padding:20px;
     height: 100vh;
-    background-color: lightblue;
+    background-color: #E9E8E8;
     color:black;
     width: 80vw;
 }
@@ -37,6 +37,7 @@
     align-items: flex-start;
     margin-top:10px;
     flex-grow: 1;
+    
 }
 .taskCard-body{
     text-align: center;
@@ -44,7 +45,7 @@
 
 .dashboard-task-container{
     width:30%;
-
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     border-radius: 8px;
     min-height: 30%;
@@ -58,6 +59,7 @@
 .taskCard-header{
     display:flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .todo-line{
@@ -69,4 +71,34 @@ border:1px solid orange;
 
 .done-line{
 border:1px solid green;
+}
+.todoCount-para{
+    height:30px;
+    width:30px;
+    background-color: blue;
+    color:white;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.inprogressCount-para{
+  height:30px;
+    width:30px;
+    background-color: orange;
+    color:white;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.doneCount-para{
+  height:30px;
+    width:30px;
+    background-color: green;
+    color:white;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
