@@ -8,6 +8,7 @@ import TaskDetails from './pages/TaskDetails/TaskDetails.jsx'
 import NotFound from './pages/NotFound/NotFound.jsx'
 
 import TaskDetailsContext from './context/TaskDetailsContext/TaskDetailsContext.jsx'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 import './App.css'
 
@@ -118,8 +119,8 @@ componentDidMount(){
             <BrowserRouter>
                 <Routes>
                   <Route path="/login" element={<LoginWrapper />}/>
-                  <Route path="/" element={<Dashboard/>}/>
-                  <Route path="/taskDetails/:id" element={<TaskDetails/>}/>
+                  <Route exact path="/" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
+                  <Route exact path="/taskDetails/:id" element={<ProtectedRoute><TaskDetails/></ProtectedRoute>}/>
                   <Route path="*" element={<NotFound/>}/>
                 </Routes>
           </BrowserRouter>
